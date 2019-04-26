@@ -1,0 +1,47 @@
+﻿@model MPCE.IR_Estagiarios.Models.RelatorioModel
+
+@{
+    ViewData["Title"] = "ComprovanteRendimentos";
+}
+
+<div style="align-content:center;text-align:center">
+    <img src="~/imagens/logo_mpce.PNG" style="opacity:inherit" />
+</div>
+<div style="align-content:center;text-align:center">
+    <h2>Procuradoria Geral de Justiça do Estado do Ceará</h2>
+</div>
+<br />
+<hr />
+<div style="text-align:center"><h3>COMPROVANTE DE RENDIMENTOS PAGOS E RETENÇÃO</h3></div>
+<hr />
+<table>
+    <tr>
+        <td><b>NOME:</b></td>
+        <td><input type="text" asp-for="NomeEstagiario" class="form-control" style="font-size:18px" /></td>
+    </tr>
+    <tr>
+        <td><b>MATRÍCULA:</b></td>
+        <td><input type="text" asp-for="Matricula" class="form-control" style="font-size:18px" /></td>
+    </tr>
+    <tr>
+        <td><b>CPF: </b></td>
+        <td><input type="text" asp-for="NrCPF" class="form-control" style="font-size:18px" /></td>
+    </tr>
+</table>
+<br />
+<br />
+<fieldset>
+    <legend>RENDIMENTOS TRIBUTÁVEIS</legend>
+    <div class="row" style="font-size:20px">
+        <div><label>Rendimentos sujeitos à tributação (Em R$)</label></div>
+        <div><input type="text" asp-for="RendimentosTributaveis" class="form-control" style="font-size:18px" /></div>
+    </div>
+</fieldset>
+<br />
+<fieldset>
+    <legend>AUXÍLIO TRANSPORTE</legend>
+    <div class="row" style="font-size:20px">
+        <div><label>Auxílio transporte (Em R$)</label></div>
+        <div><input type="text" asp-for="AuxilioTransporte" class="form-control" style="font-size:18px" /></div>
+    </div>
+</fieldset>

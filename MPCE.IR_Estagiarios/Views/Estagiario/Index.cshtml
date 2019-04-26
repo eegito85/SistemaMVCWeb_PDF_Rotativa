@@ -1,0 +1,34 @@
+﻿@model MPCE.IR_Estagiarios.Models.IREstagiarioModel
+
+@{
+    ViewData["Title"] = "GerarComprovante";
+    int AnoPassado = DateTime.Now.Year - 1;
+}
+<div style="align-content:center;text-align:center">
+    <img src="~/imagens/logo_mpce.PNG" style="opacity:inherit" />
+</div>
+<div style="align-content:center;text-align:center">
+    <h3>Procuradoria Geral de Justiça do Estado do Ceará</h3>
+</div>
+<hr />
+<div style="text-align:center">
+    <h4>Geração do comprovante de rendimentos para estagiários</h4>
+</div>
+<br />
+<br />
+<form asp-controller="Estagiario" asp-action="Index" method="post" class="form-group">
+    <div class="col-md-4">
+        <label class="form control control-label"><b>Ano de retenção:</b></label>
+        <input type="number" asp-for="AnoRetencao" value="@AnoPassado" maxlength="4" class="form-control" required>
+    </div>
+    <div style="height:20px"></div>
+    <div class="col-md-4">
+        <label class="form control control-label"><b>Matrícula do estagiário:</b></label>
+        <input type="number" asp-for="Matricula" maxlength="8" class="form-control" required>
+    </div>
+    <div style="height:30px"></div>
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Gerar Comprovante de Rendimentos</button>
+    </div>
+</form>
+
